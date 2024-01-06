@@ -23,8 +23,8 @@ const car: {
     ],
 };
 
-const totalVerdict = (car: { rating: [string, number][] }) => {
-    const sumRating = car.rating.reduce((acc, item) => {
+const totalVerdict = (car: { rating: [string, number][] }): number => {
+    const sumRating: number = car.rating.reduce((acc, item) => {
         console.log(acc, item);
 
         return item[1] + acc;
