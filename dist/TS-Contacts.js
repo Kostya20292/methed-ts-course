@@ -25,6 +25,11 @@ const persons = [
         age: 19,
         group: 'Семья',
     },
+    {
+        name: 'Сергей Александров',
+        age: 33,
+        role: 'Администратор',
+    },
 ];
 const logPerson = (persons) => {
     console.log(`${persons.name}, ${persons.age}`);

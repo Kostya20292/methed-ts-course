@@ -4,7 +4,15 @@ type User = {
     group: string;
 };
 
-const persons: User[] = [
+type Admin = {
+    name: string;
+    age: number;
+    role: string;
+};
+
+type Person = User | Admin;
+
+const persons: Person[] = [
     {
         name: 'Иван Петров',
         age: 27,
@@ -30,9 +38,14 @@ const persons: User[] = [
         age: 19,
         group: 'Семья',
     },
+    {
+        name: 'Сергей Александров',
+        age: 33,
+        role: 'Администратор',
+    },
 ];
 
-const logPerson = (persons: User): void => {
+const logPerson = (persons: Person): void => {
     console.log(`${persons.name}, ${persons.age}`);
 };
 
